@@ -22,6 +22,14 @@
 			</ul>
 		</div>
 	</nav>
+	
+	<!-- Jumbotron -->
+	<div class="container-fluid">
+		<div class="jumbotron">
+			<h2>Nós temos hoje 890 anúncios</h2>
+			<p>E mais de 861 usuários cadastrados</p>
+		</div>
+	</div>
 
 </body>
 
