@@ -31,8 +31,12 @@
 		</div>
 		
 		<div class="row">
-			<div class="col-sm-3">...</div>
-			<div class="col-sm-9">...</div>
+			<div class="col-sm-3">
+				<h4>Pesquisa Avançada</h4>
+			</div>
+			<div class="col-sm-9">
+				<h4>Últimos Anúncios</h4>
+			</div>
 		</div>
 	</div>
 
