@@ -14,9 +14,12 @@
 			<div class="navbar-header">
 				<a href="./" class="navbar-brand">Classificados</a>
 			</div>
-			<div class="nav ">
-			
-			</div>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="">Cadastre-se</a></li>
+				<li><a href="">Login</a></li>
+				<!-- <li><a href="">Meus Anúncios</a></li>
+				<li><a href="">Sair</a></li> -->
+			</ul>
 		</div>
 	</nav>
 
