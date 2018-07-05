@@ -31,7 +31,12 @@ class Usuarios {
       $sql->bindValue(":senha", $senha);
       $sql->execute();
       
-      
+      if($sql->rowCount() > 0){
+          
+          return TRUE;
+      } else {
+          return FALSE;
+      }
     }
 }
 
