@@ -2,8 +2,9 @@
 session_start();
 
 try {
-    $pdo = new PDO("myslq:dbname=classificados;host=localhost", "admin", "admin");
+    $pdo = new PDO("mysql:dbname=classificados;host=localhost", "admin", "admin@12");
 } catch ( PDOException $e) {
     echo "FALHOU: ".$e->getMessage();
     exit;
 }
+?>
