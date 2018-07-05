@@ -9,7 +9,9 @@
         $senha = $_POST['senha'];
        
         if($u->login($email, $senha)){
-            
+            ?>
+            <script type="text/javascript">window.location.href="./";</script>
+            <?php 
         } else {
             ?>
             <div class="alert alert-danger">
