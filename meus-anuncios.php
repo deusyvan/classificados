@@ -26,7 +26,7 @@ if (empty($_SESSION['cLogin'])){
             foreach ($anuncios as $anuncio):
 			?>
 			<tr>
-				<td><img src="" border="0" /></td>
+				<td><img src="assets/images/anuncios/<?php echo $anuncio['url'];?>" border="0" /></td>
 				<td><?php echo $anuncio['titulo']; ?></td>
 				<td>R$ <?php echo number_format($anuncio['valor'], 2); ?></td>
 				<td></td>		
