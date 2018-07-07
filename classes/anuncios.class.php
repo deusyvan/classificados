@@ -5,7 +5,11 @@ class Anuncios {
         global $pdo;
         
         $array = array();
-        $sql = $pdo->query("SELECT * FROM anuncios where id_usuario  = :id_usuario");
+        $sql = $pdo->query("SELECT *, (
+                
+           select anuncios_imagens.url from anuncios_imagens where  anuncios_imagens.id_anuncio = anuncio.id limit 1
+                    
+           ) as url FROM anuncios where id_usuario  = :id_usuario");
         $sql->bindValue(":id_usuario", $_SESSION['cLogin']);
         $sql->execute();
         
