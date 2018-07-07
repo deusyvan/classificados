@@ -22,9 +22,16 @@ if (empty($_SESSION['cLogin'])){
 			<?php 
 			require 'classes/anuncios.class.php';
 			$a = new Anuncios();
-			
 			$anuncios = $a->getMeusAnuncios();
+            foreach ($anuncios as $anuncio):
 			?>
+			<tr>
+				<td><img src="" border="0" /></td>
+				<td><?php echo $anuncio['titulo']; ?></td>
+				<td>R$ <?php echo number_format($anuncio['valor'], 2); ?></td>
+				<td></td>		
+			</tr>
+			<?php endforeach;?>
 		
 		</table>
 	</div>
