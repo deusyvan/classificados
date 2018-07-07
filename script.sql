@@ -24,6 +24,12 @@ CREATE TABLE `classificados`.`anuncios` (
   `estado` INT(11) NULL,
   PRIMARY KEY (`id`));
 
+CREATE TABLE `classificados`.`anuncios_imagens` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `id_anuncio` INT(11) NOT NULL,
+  `url` VARCHAR(100) NOT NULL,
+  PRIMARY KEY (`id`));
+
 
 
 
