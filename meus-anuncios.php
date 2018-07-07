@@ -10,6 +10,8 @@ if (empty($_SESSION['cLogin'])){
 
 	<div class="container">
 		<h1>Meus Anúncios</h1>
+		
+		<a href="add-anuncio.php" class="btn btn-default">Adicionar Anúncio</a>
 		<table class="table table-striped">
 			<thead>
 				<tr>

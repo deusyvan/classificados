@@ -5,7 +5,7 @@ class Anuncios {
         global $pdo;
         
         $array = array();
-        $sql = $pdo->query("SELECT *, (
+        $sql = $pdo->prepare("SELECT *, (
                 
            select anuncios_imagens.url from anuncios_imagens where  anuncios_imagens.id_anuncio = anuncio.id limit 1
                     
