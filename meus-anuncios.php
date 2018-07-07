@@ -11,6 +11,12 @@
 					<th>Ações</th>
 				</tr>
 			</thead>
+			<?php 
+			require 'classes/anuncios.class.php';
+			$a = new Anuncios();
+			
+			$anuncios = $a->getMeusAnuncios();
+			?>
 		
 		</table>
 	</div>
