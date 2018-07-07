@@ -1,4 +1,11 @@
 <?php require 'pages/header.php'; ?>
+<?php 
+if (empty($_SESSION['cLogin'])){
+    ?>
+    
+    <?php 
+}
+?>
 
 	<div class="container">
 		<h1>Meus Anúncios</h1>
