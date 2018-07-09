@@ -6,6 +6,23 @@ if(empty($_SESSION['cLogin'])) {
     <?php 
     exit;
 }
+
+require 'classes/anuncios.class.php';
+$a = new Anuncios();
+if(isset($_POST['titulo']) && !empty($_POST['titulo'])) {
+    $titulo = addslashes($_POST['titulo']);
+    $categoria = addslashes($_POST['categoria']);
+    $valor = addslashes($_POST['valor']);
+    $descricao = addslashes($_POST['descricao']);
+    $estado = addslashes($_POST['descricao']);
+    
+    $a->addAnuncio($titulo, $categoria, $vaLor, $descricao, $estado);
+    ?>
+	 <div class="alert alert-success">
+	 	Produto adicionado com sucesso!
+	 </div>   
+    <?php 
+}
 ?>
 <div class="container">
 	<h1>Meus Anúncios - Adicionar Anúncios</h1>
