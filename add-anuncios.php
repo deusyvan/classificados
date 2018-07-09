@@ -13,7 +13,14 @@ if(empty($_SESSION['cLogin'])) {
 		<div class="form-group">
 			<label for="categoria">Categoria: </label>
 			<select name="categoria" id="categoria" class="form-control">
-				<option></option>
+				<?php 
+				require 'classes/categorias.class.php';
+				$c = new Categorias();
+				$cats = $c->getLista();
+				foreach ($cats as $cat):
+				?>
+				<option value="<?php echo $cat['id'];?>"><?php echo $cat['nome']; ?></option>
+				<?php endforeach;?>
 			</select>
 		</div>
 		<div class="form-group">
