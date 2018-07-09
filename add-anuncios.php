@@ -10,7 +10,13 @@ if(empty($_SESSION['cLogin'])) {
 <div class="container">
 	<h1>Meus Anúncios - Adicionar Anúncios</h1>
 	<form method="POST" enctype="multipart/form-data">
-	
+		<div class="form-group">
+			<label for="categoria">Categoria: </label>
+			<select name="categoria" id="categoria" class="form-control">
+				<option></option>
+			</select>
+		</div>
+		
 	</form>
 </div>
 

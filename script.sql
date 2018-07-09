@@ -27,6 +27,15 @@ CREATE TABLE `classificados`.`anuncios` (
 
 
 
+--INSERINDO DADOS --
+
+INSERT INTO `classificados`.`categorias` (`nome`) VALUES ('Relógios');
+INSERT INTO `classificados`.`categorias` (`nome`) VALUES ('Roupas');
+INSERT INTO `classificados`.`categorias` (`nome`) VALUES ('Eletrônicos');
+INSERT INTO `classificados`.`categorias` (`nome`) VALUES ('Carros');
+
+
+
 
 
 
