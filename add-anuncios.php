@@ -9,6 +9,9 @@ if(empty($_SESSION['cLogin'])) {
 ?>
 <div class="container">
 	<h1>Meus Anúncios - Adicionar Anúncios</h1>
+	<form method="POST" enctype="multipart/form-data">
+	
+	</form>
 </div>
 
 <?php require 'pages/footer.php'; ?>
