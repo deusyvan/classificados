@@ -23,6 +23,9 @@ if(isset($_POST['titulo']) && !empty($_POST['titulo'])) {
 	 </div>   
     <?php 
 }
+
+$info = $a->getAnuncio($_GET['id']);
+
 ?>
 <div class="container">
 	<h1>Meus Anúncios - Editar Anúncio</h1>
@@ -60,7 +63,7 @@ if(isset($_POST['titulo']) && !empty($_POST['titulo'])) {
 				<option value="2">Ótimo</option>
 			</select>
 		</div>
-		<input type="submit" value="Adicionar" class="btn btn-default">
+		<input type="submit" value="Salvar" class="btn btn-default">
 	</form>
 </div>
 
