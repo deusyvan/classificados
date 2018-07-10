@@ -66,8 +66,10 @@ class Anuncios {
         $sql->execute();
         
         if (count($fotos) > 0){
-            print_r($fotos);
-            exit;
+            for ($q=0; $q<count($fotos);$q++){
+                $tipo = $fotos['type'][$q];
+                
+            }
         }
     }
     
