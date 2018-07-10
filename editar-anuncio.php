@@ -15,7 +15,11 @@ if(isset($_POST['titulo']) && !empty($_POST['titulo'])) {
     $valor = addslashes($_POST['valor']);
     $descricao = addslashes($_POST['descricao']);
     $estado = addslashes($_POST['estado']);
-    $fotos = $_FILES['fotos'];
+    if (isset($_FILES['fotos'])){
+        $fotos = $_FILES['fotos'];
+    } else {
+        $fotos = array();
+    }
     
     $a->editAnuncio($titulo, $categoria, $valor, $descricao, $estado, $fotos, $_GET['id']);
     ?>
