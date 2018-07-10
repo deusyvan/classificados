@@ -2,7 +2,7 @@
 <?php 
 if (empty($_SESSION['cLogin'])){
     ?>
-    <<script type="text/javascript">window.location.href="login.php";</script>
+    <script type="text/javascript">window.location.href="login.php";</script>
     <?php 
     exit;
 }
@@ -37,7 +37,10 @@ if (empty($_SESSION['cLogin'])){
 				</td>
 				<td><?php echo $anuncio['titulo']; ?></td>
 				<td>R$ <?php echo number_format($anuncio['valor'], 2); ?></td>
-				<td></td>		
+				<td>
+					<a href="editar-anuncio.php?id=<?php echo $anuncio['id']; ?>" class="btn btn-default">Editar</a>
+					<a href="excluir-anuncio.php?id=<?php echo $anuncio['id']; ?>" class="btn btn-danger">Excluir</a>
+				</td>		
 			</tr>
 			<?php endforeach;?>
 		
