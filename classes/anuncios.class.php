@@ -78,6 +78,9 @@ class Anuncios {
                     $width = 500;
                     $height = 500;
                     
+                    if ($width/$height > $ratio){
+                        
+                    }
                 }
             }
         }
