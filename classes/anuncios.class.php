@@ -28,7 +28,11 @@ class Anuncios {
         $sql->bindValue(":id", $id);
         $sql->execute();
         
+        if ($sql->rowCount() > 0 ){
+            $array = $sql->fetch();
+        }
         
+        return $array;
         
     }
     
