@@ -14,9 +14,9 @@ if(isset($_POST['titulo']) && !empty($_POST['titulo'])) {
     $categoria = addslashes($_POST['categoria']);
     $valor = addslashes($_POST['valor']);
     $descricao = addslashes($_POST['descricao']);
-    $estado = addslashes($_POST['descricao']);
+    $estado = addslashes($_POST['estado']);
     
-    $a->addAnuncio($titulo, $categoria, $vaLor, $descricao, $estado);
+    $a->addAnuncio($titulo, $categoria, $valor, $descricao, $estado);
     ?>
 	 <div class="alert alert-success">
 	 	Produto adicionado com sucesso!
