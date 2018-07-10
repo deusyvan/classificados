@@ -59,7 +59,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 		</div>
 		<div class="form-group">
 			<label for="descricao">Descrição: </label>
-			<textarea name="descricao" id="descricao" class="form-control" ><?php echo $info['descricao']; ?>"</textarea>
+			<textarea name="descricao" id="descricao" class="form-control" ><?php echo $info['descricao']; ?></textarea>
 		</div>
 		<div class="form-group">
 			<label for="estado">Estado de Conservação: </label>
