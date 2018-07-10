@@ -15,8 +15,9 @@ if(isset($_POST['titulo']) && !empty($_POST['titulo'])) {
     $valor = addslashes($_POST['valor']);
     $descricao = addslashes($_POST['descricao']);
     $estado = addslashes($_POST['estado']);
+    $fotos = $_FILES['fotos'];
     
-    $a->editAnuncio($titulo, $categoria, $valor, $descricao, $estado, $_GET['id']);
+    $a->editAnuncio($titulo, $categoria, $valor, $descricao, $estado, $fotos, $_GET['id']);
     ?>
 	 <div class="alert alert-success">
 	 	Produto editado com sucesso!
