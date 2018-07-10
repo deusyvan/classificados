@@ -71,6 +71,9 @@ class Anuncios {
                 if (in_array($tipo, array('image/jpeg', 'image/png'))){
                     $tmpname = md5(time().rand(0,9999)).'.jpg';
                     move_uploaded_file($fotos['tmp_name'][$q], 'assets/iimages/anuncios/'.$tmpname);
+                    
+                    list($width_orig, $height_orig) = getimagesize('assets/images/anuncios/'.$tmpname);
+                    
                 }
             }
         }
