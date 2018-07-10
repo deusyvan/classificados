@@ -79,7 +79,9 @@ class Anuncios {
                     $height = 500;
                     
                     if ($width/$height > $ratio){
-                        
+                        $width = $height*$ratio;
+                    } else {
+                        $height = $width/$ratio;
                     }
                 }
             }
