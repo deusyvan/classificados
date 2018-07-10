@@ -24,8 +24,14 @@ if(isset($_POST['titulo']) && !empty($_POST['titulo'])) {
     <?php 
 }
 
-$info = $a->getAnuncio($_GET['id']);
-
+if (isset($_GET['id']) && !empty($_GET['id'])) {
+    $info = $a->getAnuncio($_GET['id']);
+} else {
+    ?>
+    <script type="text/javascript">window.location.href="meus-anuncios.php";</script>
+    <?php 
+    exit;
+}
 ?>
 <div class="container">
 	<h1>Meus Anúncios - Editar Anúncio</h1>
