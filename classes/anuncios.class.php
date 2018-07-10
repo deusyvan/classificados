@@ -70,7 +70,7 @@ class Anuncios {
                 $tipo = $fotos['type'][$q];
                 if (in_array($tipo, array('image/jpeg', 'image/png'))){
                     $tmpname = md5(time().rand(0,9999)).'.jpg';
-                    move_uploaded_file($fotos['tmp_name'][$q], 'assets/iimages/anuncios/'.$tmpname);
+                    move_uploaded_file($fotos['tmp_name'][$q], 'assets/images/anuncios/'.$tmpname);
                     
                     list($width_orig, $height_orig) = getimagesize('assets/images/anuncios/'.$tmpname);
                     $ratio = $width_orig/$height_orig;
@@ -85,7 +85,12 @@ class Anuncios {
                     }
                     
                     $img = imagecreatetruecolor($width, $height);
-                    
+                    //carregar no phpgd a nossa imagem original
+                    if ($tipo == 'image/jpeg') {
+                        $origi = imagecreatefromjpeg('assets/images/anuncios/'.$tmpname);
+                    } elseif ($tipo == 'image/png'){
+                        $origi = imagecreatefrompng('assets/images/anuncios/'.$tmpname);
+                    }
                 }
             }
         }
