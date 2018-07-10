@@ -93,7 +93,7 @@ class Anuncios {
                     }
                     
                     imagecopyresampled($img, $origi, 0, 0, 0, 0, $width, $height, $width_orig, $height_orig);
-                    
+                    imagejpeg($img, 'assets/images/anuncios/'.$tmpname, 80);
                     
                 }
             }
