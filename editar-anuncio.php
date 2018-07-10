@@ -73,6 +73,12 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 			<label for="add_foto">Fotos do anúncio:</label>
 			<input type="file" name="fotos[]" multiple />
 			
+			<div class="panel panel-default">
+				<div class="panel-heading">Fotos do Anúncio</div>
+				<div class="panel-body">
+				
+				</div>
+			</div>
 		</div>
 		<input type="submit" value="Salvar" class="btn btn-default">
 	</form>
