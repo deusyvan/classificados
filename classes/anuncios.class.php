@@ -95,6 +95,10 @@ class Anuncios {
                     imagecopyresampled($img, $origi, 0, 0, 0, 0, $width, $height, $width_orig, $height_orig);
                     imagejpeg($img, 'assets/images/anuncios/'.$tmpname, 80);
                     
+                    $sql = $pdo->prepare("INSERT INTO anuncios_imagens SET id_anuncio = :id_anuncio, url = :url");
+                    $sql->bindValue(":id_anuncio", $id);
+                    $sql->bindValue(":url", $tmpname);
+                    $sql->execute();
                 }
             }
         }
