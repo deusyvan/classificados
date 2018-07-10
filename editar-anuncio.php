@@ -51,15 +51,15 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 		</div>
 		<div class="form-group">
 			<label for="titulo">Título: </label>
-			<input type="text" name="titulo" id="titulo" class="form-control" />
+			<input type="text" name="titulo" id="titulo" class="form-control" value="<?php echo $info['titulo']; ?>" />
 		</div>
 		<div class="form-group">
 			<label for="valor">Valor: </label>
-			<input type="text" name="valor" id="valor" class="form-control" />
+			<input type="text" name="valor" id="valor" class="form-control" value="<?php echo $info['valor']; ?>"/>
 		</div>
 		<div class="form-group">
 			<label for="descricao">Descrição: </label>
-			<textarea name="descricao" id="descricao" class="form-control" ></textarea>
+			<textarea name="descricao" id="descricao" class="form-control" ><?php echo $info['descricao']; ?>"</textarea>
 		</div>
 		<div class="form-group">
 			<label for="estado">Estado de Conservação: </label>
