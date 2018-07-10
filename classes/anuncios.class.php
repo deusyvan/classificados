@@ -66,7 +66,7 @@ class Anuncios {
         $sql->execute();
         
         if (count($fotos) > 0){
-            for ($q=0; $q<count($fotos);$q++){
+            for ($q=0; $q<count($fotos['tmp_name']);$q++){
                 $tipo = $fotos['type'][$q];
                 if (in_array($tipo, array('image/jpeg', 'image/png'))){
                     $tmpname = md5(time().rand(0,9999)).'.jpg';

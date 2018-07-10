@@ -76,7 +76,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 		</div>
 		<div class="form-group">
 			<label for="add_foto">Fotos do anúncio:</label>
-			<input type="file" name="fotos[]" multiple />
+			<input type="file" name="fotos[]" multiple /><br/>
 			
 			<div class="panel panel-default">
 				<div class="panel-heading">Fotos do Anúncio</div>
