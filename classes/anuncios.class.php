@@ -91,6 +91,10 @@ class Anuncios {
                     } elseif ($tipo == 'image/png'){
                         $origi = imagecreatefrompng('assets/images/anuncios/'.$tmpname);
                     }
+                    
+                    imagecopyresampled($img, $origi, 0, 0, 0, 0, $width, $height, $width_orig, $height_orig);
+                    
+                    
                 }
             }
         }
