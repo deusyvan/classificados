@@ -51,7 +51,7 @@ class Anuncios {
         
     }
     
-    public function editAnuncio($titulo, $categoria, $valor, $descricao, $estado, $id){
+    public function editAnuncio($titulo, $categoria, $valor, $descricao, $estado, $fotos, $id){
         global $pdo;
         
         $sql = $pdo->prepare("UPDATE anuncios SET titulo = :titulo, id_categoria = :id_categoria, id_usuario =
@@ -65,6 +65,9 @@ class Anuncios {
         $sql->bindValue(":id", $id);
         $sql->execute();
         
+        if (count($fotos) > 0){
+            
+        }
     }
     
     public function excluirAnuncio($id){
