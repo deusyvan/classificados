@@ -69,6 +69,11 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 				<option value="2" <?php echo ($info['estado'] == '2')?'selected="selected"': '';?>>Ótimo</option>
 			</select>
 		</div>
+		<div class="form-group">
+			<label for="add_foto">Fotos do anúncio:</label>
+			<input type="file" name="fotos[]" multiple />
+			
+		</div>
 		<input type="submit" value="Salvar" class="btn btn-default">
 	</form>
 </div>
