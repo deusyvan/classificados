@@ -35,7 +35,7 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 ?>
 <div class="container">
 	<h1>Meus Anúncios - Editar Anúncio</h1>
-	<form method="POST" enctype="multipart/form-data">
+	<form method="POST"  enctype="multipart/form-data">
 		<div class="form-group">
 			<label for="categoria">Categoria: </label>
 			<select name="categoria" id="categoria" class="form-control">
