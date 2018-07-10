@@ -73,7 +73,7 @@ class Anuncios {
                     move_uploaded_file($fotos['tmp_name'][$q], 'assets/iimages/anuncios/'.$tmpname);
                     
                     list($width_orig, $height_orig) = getimagesize('assets/images/anuncios/'.$tmpname);
-                    
+                    $ratio = $width_orig/$height_orig;
                 }
             }
         }
