@@ -13,7 +13,7 @@ if(isset($_GET['id']) && !empty($_GET['id'])){
 }
 
 if(isset($id_anuncio)){
-    
+    header("Location: editar-anuncio.php?id=".$id_anuncio);
 } else {
-header("Location: meus-anuncios.php");
+    header("Location: meus-anuncios.php");
 }
