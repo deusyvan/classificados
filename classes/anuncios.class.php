@@ -83,6 +83,9 @@ class Anuncios {
                     } else {
                         $height = $width/$ratio;
                     }
+                    
+                    $img = imagecreatetruecolor($width, $height);
+                    
                 }
             }
         }
