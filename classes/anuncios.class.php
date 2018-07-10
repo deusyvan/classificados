@@ -30,6 +30,12 @@ class Anuncios {
         
         if ($sql->rowCount() > 0 ){
             $array = $sql->fetch();
+            
+            $sql = $pdo->prepare("SELECT id,url FROM anuncios_imagens WHERE id_anuncio = :id_anuncio");
+            $sql->bindValue(":id_anuncio", $id);
+            $sql->execute();
+            
+            
         }
         
         return $array;
