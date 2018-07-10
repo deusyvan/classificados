@@ -74,6 +74,10 @@ class Anuncios {
                     
                     list($width_orig, $height_orig) = getimagesize('assets/images/anuncios/'.$tmpname);
                     $ratio = $width_orig/$height_orig;
+                    
+                    $width = 500;
+                    $height = 500;
+                    
                 }
             }
         }
