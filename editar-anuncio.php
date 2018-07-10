@@ -81,7 +81,9 @@ if (isset($_GET['id']) && !empty($_GET['id'])) {
 			<div class="panel panel-default">
 				<div class="panel-heading">Fotos do Anúncio</div>
 				<div class="panel-body">
-				
+					<?php foreach ($info['fotos'] as $foto):?>
+						
+					<?php endforeach;?>
 				</div>
 			</div>
 		</div>
