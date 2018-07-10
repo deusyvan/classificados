@@ -35,7 +35,9 @@ class Anuncios {
             $sql->bindValue(":id_anuncio", $id);
             $sql->execute();
             
-            
+            if ($sql->rowCount() > 0){
+                
+            }
         }
         
         return $array;
