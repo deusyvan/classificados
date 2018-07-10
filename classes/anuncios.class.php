@@ -68,7 +68,9 @@ class Anuncios {
         if (count($fotos) > 0){
             for ($q=0; $q<count($fotos);$q++){
                 $tipo = $fotos['type'][$q];
-                
+                if (in_array($tipo, array('image/jpeg', 'image/png'))){
+                    
+                }
             }
         }
     }
