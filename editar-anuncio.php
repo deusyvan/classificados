@@ -16,10 +16,10 @@ if(isset($_POST['titulo']) && !empty($_POST['titulo'])) {
     $descricao = addslashes($_POST['descricao']);
     $estado = addslashes($_POST['estado']);
     
-    $a->addAnuncio($titulo, $categoria, $valor, $descricao, $estado);
+    $a->editAnuncio($titulo, $categoria, $valor, $descricao, $estado, $_GET['id']);
     ?>
 	 <div class="alert alert-success">
-	 	Produto adicionado com sucesso!
+	 	Produto editado com sucesso!
 	 </div>   
     <?php 
 }
