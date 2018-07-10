@@ -69,6 +69,7 @@ class Anuncios {
             for ($q=0; $q<count($fotos);$q++){
                 $tipo = $fotos['type'][$q];
                 if (in_array($tipo, array('image/jpeg', 'image/png'))){
+                    $tmpname = md5(time().rand(0,9999)).'.jpg';
                     
                 }
             }
