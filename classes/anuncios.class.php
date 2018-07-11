@@ -18,14 +18,14 @@ class Anuncios {
         
         $array = array();
         
-        $filtrostring = array();
+        $filtrostring = array('1=1');
         
         if (!empty($filtros['categoria'])){
             $filtrostring[] = 'anuncios.id_categoria = :id_categoria';
         }
         
         if (!empty($filtros['preco'])){
-            $filtrostring[] = 'anuncios.valor BETWEN :preco1 AND :preco2';
+            $filtrostring[] = 'anuncios.valor BETWEEN :preco1 AND :preco2';
         }
         
         if (!empty($filtros['estado'])){
@@ -36,7 +36,7 @@ class Anuncios {
         $sql = $pdo->prepare("SELECT *, 
                 (select anuncios_imagens.url from anuncios_imagens where  anuncios_imagens.id_anuncio = anuncios.id limit 1) as url, 
                 (select categorias.nome from categorias where  categorias.id = anuncios.id_categoria) as categoria 
-                FROM anuncios ORDER BY id DESC LIMIT $offset, $perPage");
+                FROM anuncios WHERE ".implode(' AND ', $filtrostring)." ORDER BY id DESC LIMIT $offset, $perPage");
         $sql->execute();
         
         if ($sql->rowCount() > 0){
