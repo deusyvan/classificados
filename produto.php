@@ -5,6 +5,15 @@ require 'classes/usuarios.class.php';
 $a = new Anuncios();
 $u = new Usuarios();
 
+if(isset($_GET['id']) && !empty($_GET['id'])){
+    $id = addslashes($_GET['id']);
+} else {
+    ?>
+    <script type="text/javascript">window.location.href="index.php";</script>
+    <?php 
+    exit;
+}
+$info = $a->getAnuncio($id);
 ?>
 	<div class="container-fluid">
 		<div class="row">
