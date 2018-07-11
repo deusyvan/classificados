@@ -13,9 +13,10 @@ if (isset($_GET['p']) && !empty($_GET['p'])){
     $p = addslashes($_GET['p']);
 }
 
-$total_paginas = ceil($total_anuncios / 2);
+$por_pagina = 2;
+$total_paginas = ceil($total_anuncios / $por_pagina);
 
-$anuncios = $a->getUltimosAnuncios($p, 2);
+$anuncios = $a->getUltimosAnuncios($p, $por_pagina);
 
 ?>
 	
