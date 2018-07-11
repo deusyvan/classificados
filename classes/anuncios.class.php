@@ -37,6 +37,21 @@ class Anuncios {
                 (select anuncios_imagens.url from anuncios_imagens where  anuncios_imagens.id_anuncio = anuncios.id limit 1) as url, 
                 (select categorias.nome from categorias where  categorias.id = anuncios.id_categoria) as categoria 
                 FROM anuncios WHERE ".implode(' AND ', $filtrostring)." ORDER BY id DESC LIMIT $offset, $perPage");
+        
+        if (!empty($filtros['categoria'])){
+            $sql->bindValue(':id_categoria', $filtros['categoria']);
+        }
+        
+        if (!empty($filtros['preco'])){
+            $preco = explode('-', $filtros['preco']);
+            $sql->bindValue(':preco1', $preco[0]);
+            $sql->bindValue(':preco1', $preco[1]);
+        }
+        
+        if (!empty($filtros['estado'])){
+            $sql->bindValue(':estado', $filtros['estado']);
+        }
+        
         $sql->execute();
         
         if ($sql->rowCount() > 0){
