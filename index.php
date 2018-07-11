@@ -37,7 +37,8 @@ $anuncios = $a->getUltimosAnuncios();
                 					<?php endif; ?>
                 				</td>
 								<td>
-
+									<a href="produto.php?id=<?php echo $anuncio['id']; ?>"><?php echo $anuncio['titulo']; ?></a><br/>
+									<?php echo $anuncio['categoria']; ?>
 								</td>
 								<td>
 								
