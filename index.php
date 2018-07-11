@@ -8,7 +8,12 @@ $u = new Usuarios();
 $total_anuncios = $a->getTotalAnuncios();
 $total_usuarios = $u->getTotalUsuarios();
 
-$anuncios = $a->getUltimosAnuncios();
+$p = 1;
+if (isset($_GET['p']) && !empty($_GET['p'])){
+    $p = addslashes($_GET['p']);
+}
+
+$anuncios = $a->getUltimosAnuncios($p);
 
 ?>
 	
