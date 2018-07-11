@@ -13,6 +13,8 @@ if (isset($_GET['p']) && !empty($_GET['p'])){
     $p = addslashes($_GET['p']);
 }
 
+$total_paginas = $total_anuncios / 2;
+
 $anuncios = $a->getUltimosAnuncios($p, 2);
 
 ?>
