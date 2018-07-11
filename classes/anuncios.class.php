@@ -45,7 +45,7 @@ class Anuncios {
         if (!empty($filtros['preco'])){
             $preco = explode('-', $filtros['preco']);
             $sql->bindValue(':preco1', $preco[0]);
-            $sql->bindValue(':preco1', $preco[1]);
+            $sql->bindValue(':preco2', $preco[1]);
         }
         
         if (!empty($filtros['estado'])){
