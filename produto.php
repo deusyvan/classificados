@@ -25,8 +25,9 @@ $info = $a->getAnuncio($id);
 								<img src="assets/images/anuncios/<?php echo $foto['url']; ?>" />
 							</div>
 						<?php endforeach; ?>
-					</div>				
-				</div>
+					</div>
+					<a class="left carousel-control" href="#meuCarousel" role="button" data-slide="prev"><span><</span></a>		
+					<a class="right carousel-control" href="#meuCarousel" role="button" data-slide="next"><span>></span></a>	
 			</div>
 			<div class="col-sm-8">
 				...
