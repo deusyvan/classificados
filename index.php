@@ -2,8 +2,10 @@
 <?php 
 require 'classes/anuncios.class.php';
 require 'classes/usuarios.class.php';
+require 'classes/categorias.class.php';
 $a = new Anuncios();
 $u = new Usuarios();
+$c = new Categorias();
 
 $total_anuncios = $a->getTotalAnuncios();
 $total_usuarios = $u->getTotalUsuarios();
@@ -17,7 +19,7 @@ $por_pagina = 2;
 $total_paginas = ceil($total_anuncios / $por_pagina);
 
 $anuncios = $a->getUltimosAnuncios($p, $por_pagina);
-
+$categorias = $c->getLista();
 ?>
 	
 	<!-- Jumbotron -->
@@ -33,7 +35,9 @@ $anuncios = $a->getUltimosAnuncios($p, $por_pagina);
 				<form method="GET">
 					<div class="form-group">
 						<select name="filtros[categoria]" class="form-control">
-						
+							<?php foreach ($categorias as $cat): ?>
+								<option value="<?php echo $cat['id']; ?>"><?php echo $cat['nome']; ?></option>
+							<?php endforeach; ?>
 						</select>
 					</div>
 				</form>
