@@ -18,7 +18,7 @@ class Anuncios {
         $sql = $pdo->prepare("SELECT *, 
                 (select anuncios_imagens.url from anuncios_imagens where  anuncios_imagens.id_anuncio = anuncios.id limit 1) as url, 
                 (select categorias.nome from categorias where  categorias.id = anuncios.id_categoria) as categoria 
-                FROM anuncios ORDER BY id DESC");
+                FROM anuncios ORDER BY id DESC LIMIT 2");
         $sql->execute();
         
         if ($sql->rowCount() > 0){
