@@ -24,6 +24,14 @@ class Anuncios {
             $filtrostring[] = 'anuncios.id_categoria = :id_categoria';
         }
         
+        if (!empty($filtros['preco'])){
+            $filtrostring[] = 'anuncios.valor BETWEN :preco1 AND :preco2';
+        }
+        
+        if (!empty($filtros['estado'])){
+            $filtrostring[] = 'anuncios.estado = :estado';
+        }
+        
         
         $sql = $pdo->prepare("SELECT *, 
                 (select anuncios_imagens.url from anuncios_imagens where  anuncios_imagens.id_anuncio = anuncios.id limit 1) as url, 
