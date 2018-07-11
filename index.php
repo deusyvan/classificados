@@ -8,6 +8,8 @@ $u = new Usuarios();
 $total_anuncios = $a->getTotalAnuncios();
 $total_usuarios = $u->getTotalUsuarios();
 
+$anuncios = $a->getUltimosAnuncios();
+
 ?>
 	
 	<!-- Jumbotron -->
@@ -23,7 +25,27 @@ $total_usuarios = $u->getTotalUsuarios();
 			</div>
 			<div class="col-sm-9">
 				<h4>Últimos Anúncios</h4>
-				
+				<table class="table table-striped">
+					<tbody>
+						<?php foreach ($anuncios as $anuncio): ?>
+							<tr>
+								<td>
+                					<?php if (!empty($anuncio['url'])): ?>
+                						<img src="assets/images/anuncios/<?php echo $anuncio['url'];?>" height="50" border="0" />
+                					<?php else: ?>
+                						<img src="assets/images/default.jpg"  height="50" border="0" />
+                					<?php endif; ?>
+                				</td>
+								<td>
+
+								</td>
+								<td>
+								
+								</td>
+							</tr>
+						<?php endforeach; ?>
+					</tbody>
+				</table>
 			</div>
 		</div>
 	</div>
