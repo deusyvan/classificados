@@ -1,6 +1,15 @@
 <?php
  
 class Anuncios {
+    
+    public function getTotalAnuncios(){
+        global $pdo;
+        
+        $sql = $pdo->query("SELECT COUNT(*) as c FROM anuncios");
+        $row = $sql->fetch();
+        return $row['c'];
+        
+    }
     public function getMeusAnuncios(){
         global $pdo;
         
