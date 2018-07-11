@@ -13,7 +13,7 @@ if (isset($_GET['p']) && !empty($_GET['p'])){
     $p = addslashes($_GET['p']);
 }
 
-$anuncios = $a->getUltimosAnuncios($p);
+$anuncios = $a->getUltimosAnuncios($p, 2);
 
 ?>
 	
