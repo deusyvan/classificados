@@ -30,6 +30,13 @@ $anuncios = $a->getUltimosAnuncios($p, $por_pagina);
 		<div class="row">
 			<div class="col-sm-3">
 				<h4>Pesquisa Avançada</h4>
+				<form method="GET">
+					<div class="form-group">
+						<select name="filtros[categoria]" class="form-control">
+						
+						</select>
+					</div>
+				</form>
 			</div>
 			<div class="col-sm-9">
 				<h4>Últimos Anúncios</h4>
