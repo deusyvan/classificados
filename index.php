@@ -56,7 +56,7 @@ $anuncios = $a->getUltimosAnuncios($p, $por_pagina);
 				
 				<ul class="pagination">
 					<?php for ($i=0; $i<$total_paginas; $i++): ?>
-					
+						<li><a href=""><?php echo ($i+1); ?></a></li>
 					<?php endfor; ?>
 				</ul>
 			</div>
