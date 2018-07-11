@@ -40,9 +40,7 @@ $anuncios = $a->getUltimosAnuncios();
 									<a href="produto.php?id=<?php echo $anuncio['id']; ?>"><?php echo $anuncio['titulo']; ?></a><br/>
 									<?php echo $anuncio['categoria']; ?>
 								</td>
-								<td>
-								
-								</td>
+								<td>R$ <?php echo number_format($anuncio['valor'], 2); ?></td>
 							</tr>
 						<?php endforeach; ?>
 					</tbody>
