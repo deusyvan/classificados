@@ -34,7 +34,9 @@ $categorias = $c->getLista();
 				<h4>Pesquisa Avançada</h4>
 				<form method="GET">
 					<div class="form-group">
-						<select name="filtros[categoria]" class="form-control">
+						<label for="categoria">Categoria:</label>
+						<select id="categoria" name="filtros[categoria]" class="form-control">
+							<option></option>
 							<?php foreach ($categorias as $cat): ?>
 								<option value="<?php echo $cat['id']; ?>"><?php echo $cat['nome']; ?></option>
 							<?php endforeach; ?>
