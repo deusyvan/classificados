@@ -31,12 +31,12 @@ $info = $a->getAnuncio($id);
 				</div>
 			</div>
 			<div class="col-sm-7">
-    			<h1>Nome do produto</h1>
-    			<h4>Categoria do Produto</h4>
-    			<p>Descrição do Produto</p>
+    			<h1><?php echo $info['titulo']; ?></h1>
+    			<h4><?php echo $info['categoria']; ?></h4>
+    			<p><?php echo $info['descricao']; ?></p>
     			<br/>
-    			<h3>R$ 999</h3>
-    			<h4>Telefone: 35335353</h4>
+    			<h3>R$ <?php echo number_format($info['valor'], 2); ?></h3>
+    			<h4>Telefone: <?php echo $info['telefone']; ?></h4>
     		</div>
 		</div>
 	</div>
