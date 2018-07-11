@@ -18,7 +18,15 @@ $info = $a->getAnuncio($id);
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-sm-4">
-				...
+				<div class="carousel slide" data-ride="carousel" id="meuCarousel">
+					<div class="carousel-inner" role="listbox">
+						<?php foreach ($info['fotos'] as $chave => $foto): ?>
+							<div class="item <?php echo ($chave == '0')? 'active':''; ?>">
+								<img src="assets/images/anuncios/<?php echo $foto['url']; ?>" />
+							</div>
+						<?php endforeach; ?>
+					</div>				
+				</div>
 			</div>
 			<div class="col-sm-8">
 				...
