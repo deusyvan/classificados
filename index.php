@@ -7,6 +7,16 @@ $a = new Anuncios();
 $u = new Usuarios();
 $c = new Categorias();
 
+$filtros = array(
+    'categoria' => '',
+    'preco' => '',
+    'estado' => ''
+);
+
+if (isset($_GET['filtros'])) {
+    $filtros = $_GET['filtros'];
+}
+
 $total_anuncios = $a->getTotalAnuncios();
 $total_usuarios = $u->getTotalUsuarios();
 
