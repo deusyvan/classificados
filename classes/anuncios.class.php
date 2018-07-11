@@ -17,6 +17,14 @@ class Anuncios {
         $offset = ($page -1) * $perPage;
         
         $array = array();
+        
+        $filtrostring = array();
+        
+        if (!empty($filtros['categoria'])){
+            $filtrostring[] = 'anuncios.id_categoria = :id_categoria';
+        }
+        
+        
         $sql = $pdo->prepare("SELECT *, 
                 (select anuncios_imagens.url from anuncios_imagens where  anuncios_imagens.id_anuncio = anuncios.id limit 1) as url, 
                 (select categorias.nome from categorias where  categorias.id = anuncios.id_categoria) as categoria 
