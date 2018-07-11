@@ -53,6 +53,12 @@ $anuncios = $a->getUltimosAnuncios($p, $por_pagina);
 						<?php endforeach; ?>
 					</tbody>
 				</table>
+				
+				<ul class="pagination">
+					<?php for ($i=0; $i<$total_paginas; $i++): ?>
+					
+					<?php endfor; ?>
+				</ul>
 			</div>
 		</div>
 	</div>
