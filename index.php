@@ -28,7 +28,7 @@ if (isset($_GET['p']) && !empty($_GET['p'])){
 $por_pagina = 2;
 $total_paginas = ceil($total_anuncios / $por_pagina);
 
-$anuncios = $a->getUltimosAnuncios($p, $por_pagina);
+$anuncios = $a->getUltimosAnuncios($p, $por_pagina, $filtros);
 $categorias = $c->getLista();
 ?>
 	

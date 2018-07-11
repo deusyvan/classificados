@@ -11,11 +11,10 @@ class Anuncios {
         
     }
     
-    public function getUltimosAnuncios($page, $perPage){
+    public function getUltimosAnuncios($page, $perPage, $filtros){
         global $pdo;
         
         $offset = ($page -1) * $perPage;
-        
         
         $array = array();
         $sql = $pdo->prepare("SELECT *, 
