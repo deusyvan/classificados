@@ -17,7 +17,7 @@ if (isset($_GET['filtros'])) {
     $filtros = $_GET['filtros'];
 }
 
-$total_anuncios = $a->getTotalAnuncios();
+$total_anuncios = $a->getTotalAnuncios($filtros);
 $total_usuarios = $u->getTotalUsuarios();
 
 $p = 1;
