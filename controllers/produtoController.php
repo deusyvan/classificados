@@ -18,6 +18,8 @@ class produtoController extends controller{
         
         $info = $a->getAnuncio($id);
         
+        $dados['info'] = $info;
+        
         $this->loadTemplate('produto',$dados);
     }
 }
