@@ -51,8 +51,7 @@ class anunciosController extends controller{
        if (empty($_SESSION['cLogin'])){
            header("Location: ".BASE_URL."login");
            exit;
-       }
-       
+       } 
        
    }
 }
