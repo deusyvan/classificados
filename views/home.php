@@ -51,13 +51,13 @@
 							<tr>
 								<td>
                 					<?php if (!empty($anuncio['url'])): ?>
-                						<img src="assets/images/anuncios/<?php echo $anuncio['url'];?>" height="50" border="0" />
+                						<img src="<?php echo BASE_URL; ?>assets/images/anuncios/<?php echo $anuncio['url'];?>" height="50" border="0" />
                 					<?php else: ?>
-                						<img src="assets/images/default.jpg"  height="50" border="0" />
+                						<img src="<?php echo BASE_URL; ?>assets/images/default.jpg"  height="50" border="0" />
                 					<?php endif; ?>
                 				</td>
 								<td>
-									<a href="produto.php?id=<?php echo $anuncio['id']; ?>"><?php echo $anuncio['titulo']; ?></a><br/>
+									<a href="<?php echo BASE_URL; ?>produto/abrir/<?php echo $anuncio['id']; ?>"><?php echo $anuncio['titulo']; ?></a><br/>
 									<?php echo $anuncio['categoria']; ?>
 								</td>
 								<td>R$ <?php echo number_format($anuncio['valor'], 2); ?></td>
@@ -69,7 +69,7 @@
 				<ul class="pagination">
 					<?php for ($i=1; $i<=$total_paginas; $i++): ?>
 						<li class="<?php echo ($p==$i)?'active':''; ?>">
-							<a href="index.php?
+							<a href="<?php echo BASE_URL; ?>?
     							     <?php
     							         $w = $_GET;
     							         $w['p'] = $i;
