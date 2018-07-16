@@ -67,15 +67,17 @@
 				</table>
 				
 				<ul class="pagination">
-					<?php for ($i=1; $i<=$total_paginas; $i++): ?>
-						<li class="<?php echo ($p==$i)?'active':''; ?>">
+					<?php for ($q=1; $q<=$total_paginas; $q++): 
+					      $p = isset($_GET['p']) ? $_GET['p'] : 0;
+					?>
+						<li class="<?php echo ($p==$q)?'active':''; ?>">
 							<a href="<?php echo BASE_URL; ?>?
     							     <?php
     							         $w = $_GET;
-    							         $w['p'] = $i;
+    							         $w['p'] = $q;
     							         echo http_build_query($w); 
     							     ?>">
-								<?php echo $i; ?>
+								<?php echo $q; ?>
 							</a>
 						</li>
 					<?php endfor; ?>
