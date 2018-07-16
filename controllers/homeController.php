@@ -31,6 +31,9 @@ class homeController extends controller{
         $anuncios = $a->getUltimosAnuncios($p, $por_pagina, $filtros);
         $categorias = $c->getLista();
       
+        $dados['total_anuncios'] = $total_anuncios;
+        $dados['total_usuarios'] = $total_usuarios;
+        
         $this->loadTemplate('home', $dados);
         
     }
