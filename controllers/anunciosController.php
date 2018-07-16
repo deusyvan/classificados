@@ -44,4 +44,15 @@ class anunciosController extends controller{
         
         $this->loadTemplate('add',$dados);
    }
+   
+   public function editar($id){
+       $dados = array();
+       
+       if (empty($_SESSION['cLogin'])){
+           header("Location: ".BASE_URL."login");
+           exit;
+       }
+       
+       
+   }
 }
