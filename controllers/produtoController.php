@@ -7,7 +7,7 @@ class produtoController extends controller{
     }
     
     public function abrir($id){
-        
+        $dados = array();
         $a = new Anuncios();
         $u = new Usuarios();
         
@@ -18,6 +18,6 @@ class produtoController extends controller{
         
         $info = $a->getAnuncio($id);
         
-        
+        $this->loadTemplate('produto',$dados);
     }
 }
