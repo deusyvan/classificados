@@ -31,7 +31,8 @@ class cadastrarController extends controller{
                                             Preencha todos os campos
                                        </div>';
                    }
-             $this->loadTemplate('cadastrar', $dados);
             }
+            
+            $this->loadTemplate('cadastrar', $dados);
         }
     }
