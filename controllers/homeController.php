@@ -33,6 +33,10 @@ class homeController extends controller{
       
         $dados['total_anuncios'] = $total_anuncios;
         $dados['total_usuarios'] = $total_usuarios;
+        $dados['categorias'] = $categorias;
+        $dados['filtros'] = $filtros;
+        $dados['anuncios'] = $anuncios;
+        $dados['total_paginas'] = $total_paginas;
         
         $this->loadTemplate('home', $dados);
         
