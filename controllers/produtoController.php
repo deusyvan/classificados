@@ -11,6 +11,7 @@ class produtoController extends controller{
         $a = new Anuncios();
         $u = new Usuarios();
         
+        //Redireciona se estiver vazio
         if(empty($id)){
             header("Location: ".BASE_URL);
             exit;

@@ -15,7 +15,7 @@
     				<?php if (isset($_SESSION['cLogin']) && !empty($_SESSION['cLogin'])):?>
     					<li><a href="#">Usuário: <?php echo $_SESSION['cNome']; ?></a></li>
     					<li><a href="<?php echo BASE_URL; ?>anuncios">Meus Anúncios</a></li>
-    				    <li><a href="<?php echo BASE_URL; ?>/login/sair">Sair</a></li>
+    				    <li><a href="<?php echo BASE_URL; ?>login/sair">Sair</a></li>
     				<?php  else:?>
         				<li><a href="<?php echo BASE_URL; ?>cadastrar">Cadastre-se</a></li>
         				<li><a href="<?php echo BASE_URL; ?>login">Login</a></li>
