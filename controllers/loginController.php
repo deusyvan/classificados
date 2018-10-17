@@ -23,4 +23,5 @@ class loginController extends controller{
         unset($_SESSION['cLogin']);
         header("Location: ".BASE_URL);
     }
+    
 }
